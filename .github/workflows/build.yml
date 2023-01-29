@@ -7,9 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
-    permissions:
-    contents: write
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -24,5 +22,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-
-
