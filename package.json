@@ -1,9 +1,11 @@
 {
-  "name": "feed-reactjs",
+  "name": "react-feed",
   "private": true,
   "version": "0.0.0",
-  "homepage": "github-page/",
+  "homepage": "https://naylsonrj.github.io/react-feed",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

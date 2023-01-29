@@ -1,4 +1,4 @@
-name: deploy
+name: github pages deploy
 
 on:
   push:
@@ -15,10 +15,17 @@ jobs:
           node-version: '16.x'
       - name: Build web-app
         run: |
-          npm ci
+          npm install
           npm run build
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+          with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: development # The branch the action should deploy from.
+          BRANCH: MAIN # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          SINGLE_COMMIT: true
