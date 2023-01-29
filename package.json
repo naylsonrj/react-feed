@@ -2,6 +2,7 @@
   "name": "feed-reactjs",
   "private": true,
   "version": "0.0.0",
+  "homepage": "github-page/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
