@@ -1,8 +1,8 @@
 {
   "name": "react-feed",
+  "homepage": "github-page/",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://naylsonrj.github.io/react-feed",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
